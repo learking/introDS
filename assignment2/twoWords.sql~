@@ -1,1 +1,0 @@
-select count(docid) from Frequency a, Frequency b where a.docid = b.docid and a.term='transactions' and b.term='world';
