@@ -1,0 +1,4 @@
+SELECT FrequencyA.docid, FrequencyB.term, SUM(FrequencyA.count * FrequencyB.value)
+  FROM Frequency FrequencyA, Frequency FrequencyB
+ WHERE FrequencyA.col_num = FrequencyB.col_num and FrequencyA.docid < FrequencyB.docid
+ GROUP BY FrequencyA.row_num, FrequencyB.col_num;
